@@ -23,3 +23,14 @@ Gig-Guard ensures Rahul receives automatic compensation when such disruptions oc
 + **Fraud Detection Mechanism** – Identifies suspicious patterns and prevents false claims.
 + **User Dashboard** – Displays active plan, earnings protected, and claim history in a simple interface.
 + **Lightweight Web Access** – Accessible on any device without installation, optimized for ease of use.
+
+---
+
+## Weekly Premium Model
+•	Users pay a fixed weekly premium (₹20–₹50)
+•	Premium depends on:
+  •	Location risk
+  •	Historical disruption data
+  •	Work patterns
+Higher risk → higher premium
+Lower risk → lower premium
