@@ -34,3 +34,25 @@ Gig-Guard ensures Rahul receives automatic compensation when such disruptions oc
  Work patterns  
 + Higher risk → higher premium  
 + Lower risk → lower premium
+
+---
+
+## Parametric Triggers
+Payouts are triggered automatically when:
++	Rainfall exceeds threshold
++	AQI crosses hazardous level
++	Curfew or restriction in area
++	Platform/service downtime
+
+---
+
+## AI/ML Integration
++ Premium Calculation: Predicts risk and adjusts pricing
++ Fraud Detection: Detects unusual activity and fake claims
+
+## Platform Choice: Web Application
++	We chose a web application because:
++	Easy accessibility across devices
++	No installation required
++	Faster deployment and testing
++	Works well even on low-end devices
