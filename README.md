@@ -50,9 +50,26 @@ Payouts are triggered automatically when:
 + Premium Calculation: Predicts risk and adjusts pricing
 + Fraud Detection: Detects unusual activity and fake claims
 
+---
+
 ## Platform Choice: Web Application
 +	We chose a web application because:
 +	Easy accessibility across devices
 +	No installation required
 +	Faster deployment and testing
 +	Works well even on low-end devices
+
+---
+
+### Tech Stack
++	Frontend: HTML, CSS, JavaScript (React optional)
++	Backend: Node.js / Python (Flask)
++	Database: MongoDB / MySQL
++	APIs: Weather API, AQI API
+
+---
+
+### Development Plan
++	Phase 1: Ideation, workflow, documentation
++	Phase 2: Core feature development
++	Phase 3: AI + fraud detection improvements
