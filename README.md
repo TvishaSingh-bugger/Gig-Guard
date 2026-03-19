@@ -32,5 +32,5 @@ Gig-Guard ensures Rahul receives automatic compensation when such disruptions oc
   +	Location risk
   +	Historical disruption data
   +	Work patterns
-Higher risk → higher premium
+Higher risk → higher premium  
 Lower risk → lower premium
