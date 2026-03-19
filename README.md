@@ -4,9 +4,9 @@ An AI-enabled parametric insurance platform that safeguards gig workers against 
 ---
 
 ## Persona & Scenario
-### **Persona:**
+**Persona:**
 Rahul, a food delivery partner, earns per order and works daily to sustain his income.
-### **Problem Scenario:**
+**Problem Scenario:**
     - Heavy rain / high AQI / curfew → Rahul cannot deliver orders
     - No work → No income
     - No existing protection system
