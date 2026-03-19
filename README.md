@@ -1,6 +1,8 @@
 # **Gig-Guard**
 An AI-enabled parametric insurance platform that safeguards gig workers against income loss caused by external disruptions such as extreme weather or environmental conditions.
+
 ---
+
 # Persona & Scenario
 **Persona:**
 Rahul, a food delivery partner, earns per order and works daily to sustain his income.
