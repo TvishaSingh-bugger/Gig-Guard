@@ -29,7 +29,7 @@ Gig-Guard ensures Rahul receives automatic compensation when such disruptions oc
 ## Weekly Premium Model
 +	Users pay a fixed weekly premium
 +	Premium depends on:  
- Location risk  
+  + Location risk  
  Historical disruption data  
  Work patterns  
 Higher risk → higher premium  
