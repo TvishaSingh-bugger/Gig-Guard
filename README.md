@@ -81,9 +81,9 @@ We chose a web application because:
 GigGuard does not rely solely on GPS data. Instead, it uses a multi-layer verification system powered by AI to differentiate between genuine users and spoofers.
 + Behavior Analysis - Real users show consistent movement patterns (active deliveries, route changes), while spoofers show static or unnatural jumps in location.
 + Activity Validation - Genuine delivery partners have:
-1. Recent order activity
-2. App interaction logs
-3. Continuous usage patterns
+Recent order activity
+App interaction logs
+Continuous usage patterns
 + Anomaly Detection (AI) - Machine learning models compare current behavior with historical patterns to detect unusual claims.
 ## Data Signals Used (Beyond GPS)
 To prevent spoofing, the system uses multiple data points:
