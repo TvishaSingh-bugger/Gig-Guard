@@ -81,7 +81,7 @@ Payouts are triggered automatically when:
 GigGuard does not rely solely on GPS data. Instead, it uses a multi-layer verification system powered by AI to differentiate between genuine users and spoofers.
 + Behavior Analysis
 Real users show consistent movement patterns (active deliveries, route changes), while spoofers show static or unnatural jumps in location.
-+ Activity Validation
++ Activity Validation  
 Genuine delivery partners have:
 + Recent order activity
 + App interaction logs
