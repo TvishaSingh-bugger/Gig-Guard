@@ -41,7 +41,7 @@ Gig-Guard ensures Rahul receives automatic compensation when such disruptions oc
 
 ## System Workflow
 
-<img width="1372" height="1171" alt="image" src="https://github.com/user-attachments/assets/ac41836c-c875-4465-a43a-8f6afb5bd241" />
+![WhatsApp Image 2026-03-20 at 2 22 51 AM](https://github.com/user-attachments/assets/a65bf5ce-c963-4c79-9659-0b04808675f9)
 
 ---
 
