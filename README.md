@@ -83,8 +83,8 @@ GigGuard does not rely solely on GPS data. Instead, it uses a multi-layer verifi
 Real users show consistent movement patterns (active deliveries, route changes), while spoofers show static or unnatural jumps in location.
 + Activity Validation  
 Genuine delivery partners have:
-+ Recent order activity
-+ App interaction logs
-+ Continuous usage patterns
+1. Recent order activity
+2. App interaction logs
+3. Continuous usage patterns
 + Anomaly Detection (AI)
 Machine learning models compare current behavior with historical patterns to detect unusual claims.
