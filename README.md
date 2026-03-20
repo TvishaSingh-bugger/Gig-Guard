@@ -80,9 +80,9 @@ We chose a web application because:
 ### Differentiation (Real vs Fake Users)
 GigGuard does not rely solely on GPS data. Instead, it uses a multi-layer verification system powered by AI to differentiate between genuine users and spoofers.
 + Behavior Analysis - Real users show consistent movement patterns (active deliveries, route changes), while spoofers show static or unnatural jumps in location.
-+ Activity Validation - Genuine delivery partners have:
-Recent order activity
-App interaction logs
++ Activity Validation - Genuine delivery partners have:  
+Recent order activity  
+App interaction logs  
 Continuous usage patterns
 + Anomaly Detection (AI) - Machine learning models compare current behavior with historical patterns to detect unusual claims.
 ## Data Signals Used (Beyond GPS)
@@ -103,3 +103,18 @@ To prevent spoofing, the system uses multiple data points:
 + Area-wide disruption patterns
 5. Cluster Detection
 If multiple users show identical suspicious behavior (same location pattern), the system flags a potential fraud ring.
+## UX Balance (Fairness for Honest Users)
+The system is designed to protect honest users while stopping fraud:
++ Risk-Based Claim Handling  
+Low risk → Instant payout  
+Medium risk → Slight delay + auto-check  
+High risk → Manual review
++ Grace Handling  
+Temporary GPS/network issues are tolerated  
+No immediate rejection of claims
++ Transparency  
+Users are informed if a claim is under review  
+No hidden penalties
++ Trust Score System  
+Users build a reliability score over time  
+High-trust users get faster approvals
