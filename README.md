@@ -1,9 +1,9 @@
-## Team Details
+# Team Details
 Team Name: **CodeManthan**
 Members:
 - Tvisha (Team Lead – Project Planning, Coordination, Documentation)  
-- Gurudutt (System Design, Backend Logic, AI Integration)  
-- Rashi (Frontend Development, UI/UX Design, Presentation)
+- Rashi (System Design, Backend Logic, AI Integration)  
+- Gurudutt (Frontend Development, UI/UX Design, Presentation)
 
 ---
 
