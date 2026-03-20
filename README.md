@@ -85,3 +85,21 @@ GigGuard does not rely solely on GPS data. Instead, it uses a multi-layer verifi
 2. App interaction logs
 3. Continuous usage patterns
 + Anomaly Detection (AI) - Machine learning models compare current behavior with historical patterns to detect unusual claims.
+## Data Signals Used (Beyond GPS)
+To prevent spoofing, the system uses multiple data points:
+1. Device Sensors
++ Acelerometer (movement detection)
++ Gyroscope (motion consistency)
+2. Network & Location Data
++ GPS + IP location consistency
++ Cell tower / network signals
+3. User Activity Data
++ Delivery history
++ App usage patterns
++ Active working hours
+4. Environmental Validation
++ Weather API (rain, flood alerts)
++ AQI data
++ Area-wide disruption patterns
+5. Cluster Detection
+If multiple users show identical suspicious behavior (same location pattern), the system flags a potential fraud ring.
