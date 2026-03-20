@@ -53,7 +53,7 @@ Payouts are triggered automatically when:
 ---
 
 ## Platform Choice: Web Application
-+	We chose a web application because:
+We chose a web application because:
 +	Easy accessibility across devices
 +	No installation required
 +	Faster deployment and testing
