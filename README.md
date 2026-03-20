@@ -1,5 +1,5 @@
 # Team Details
-Team Name: **CodeManthan**
+Team Name: **CodeManthan**  
 Members:
 - Tvisha (Team Lead – Project Planning, Coordination, Documentation)  
 - Rashi (System Design, Backend Logic, AI Integration)  
