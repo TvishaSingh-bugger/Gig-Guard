@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#2c5364);
+    color:white;
+}
+
+.header {
+    text-align:center;
+    padding:20px;
+    font-size:26px;
+    letter-spacing:1px;
+    font-weight:600;
+}
+
+.container {
+    width:85%;
+    margin:auto;
+}
+
+/* ENHANCED CARD */
+.card {
+    background:white;
+    color:black;
+    padding:25px;
+    margin:20px 0;
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px) scale(1.01);
+}
+
+/* FLEX */
+.flex {
+    display:flex;
+    gap:15px;
+}
+
+/* METRIC UPGRADE */
+.metric {
+    flex:1;
+    text-align:center;
+    padding:20px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#eef3ff,#dbe7ff);
+    font-weight:bold;
+    box-shadow:inset 0 0 10px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.metric:hover {
+    transform:scale(1.05);
+}
+
+/* BUTTON UPGRADE */
+button {
+    padding:12px;
+    background:linear-gradient(135deg,#2c5364,#1e3c50);
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.2s;
+    font-weight:600;
+}
+
+button:hover {
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* SECTION TITLES */
+h3 {
+    margin-bottom:10px;
+    border-left:4px solid #2c5364;
+    padding-left:10px;
+}
+
+/* CLAIM HISTORY STYLE */
+.card p {
+    line-height:1.6;
+}
+
+/* STATUS BADGE (NEW, SAFE ADDITION) */
+.badge {
+    display:inline-block;
+    padding:5px 10px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+.safe {
+    background:#d4edda;
+    color:#155724;
+}
+
+.risk {
+    background:#f8d7da;
+    color:#721c24;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">Gig-Guard | Policy Dashboard</div>
+
+<div class="container">
+
+<div class="card">
+<h3>Policy Overview</h3>
+
+<p><b>ID:</b> {{ user.policy_id }}</p>
+<p><b>Category:</b> {{ user.category }}</p>
+<p><b>Company:</b> {{ user.company }}</p>
+<p><b>Age:</b> {{ user.age }}</p>
+<p><b>Weekly Premium:</b> ₹{{ premium }}</p>
+
+<!-- ✅ ADDED (MINIMAL, SAFE) -->
+<p><b>Risk Score:</b> {{ risk }}/100</p>
+<p><b>Risk Level:</b> {{ risk_level }}</p>
+
+<p><b>Plan:</b> {{ user.plan }}</p>
+
+<form action="/select-plan" method="POST">
+<select name="plan">
+<option>Basic</option>
+<option>Premium</option>
+</select>
+<button>Update Plan</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Live Risk Data</h3>
+
+<div class="flex">
+<div class="metric">AQI<br>{{ data.aqi }}</div>
+<div class="metric">Rain<br>{{ data.rain }}</div>
+<div class="metric">Temp<br>{{ data.temp }}</div>
+<div class="metric">Condition<br>{{ data.condition }}</div>
+</div>
+
+</div>
+
+<div class="card">
+<h3>Claim Engine</h3>
+
+<form action="/simulate">
+<button>Check Disruption & Claim</button>
+</form>
+
+{% if user.history %}
+<p>
+<b>Last Claim:</b> {{ user.history[-1] }}
+
+{% if "No disruption" in user.history[-1] %}
+<span class="badge safe">SAFE</span>
+{% else %}
+<span class="badge risk">TRIGGERED</span>
+{% endif %}
+
+</p>
+{% endif %}
+</div>
+
+<div class="card">
+<h3>Claim History</h3>
+{% for c in user.history %}
+<p>• {{ c }}</p>
+{% endfor %}
+</div>
+
+</div>
+
+</body>
+</html>

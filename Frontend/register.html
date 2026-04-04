@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#2c5364);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.header {
+    color:white;
+    font-size:26px;
+    margin-top:25px;
+    font-weight:600;
+}
+
+.card {
+    background:white;
+    margin-top:30px;
+    padding:35px;
+    width:420px;
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+}
+
+label {
+    font-weight:600;
+    font-size:14px;
+}
+
+input, select {
+    width:100%;
+    padding:10px;
+    margin:8px 0 15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button {
+    width:100%;
+    padding:12px;
+    background:linear-gradient(135deg,#2c5364,#1e3c50);
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.hidden { display:none; }
+
+.error {
+    color:red;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">Gig-Guard | Register</div>
+
+<div class="card">
+
+<form method="POST">
+
+<label>Username</label>
+<input name="username" required>
+
+<label>Date of Birth</label>
+<input name="dob" type="date" required>
+
+<label>Platform Category</label>
+<select id="category" name="category" onchange="handleCategory()">
+<option>Food Delivery</option>
+<option>Quick Commerce</option>
+<option>Logistics</option>
+<option>Courier</option>
+<option>Other</option>
+</select>
+
+<div id="customCategoryBox" class="hidden">
+<label>Enter Platform Type</label>
+<input name="custom_category">
+</div>
+
+<label>Company</label>
+<select id="company" name="company" onchange="handleCompany()"></select>
+
+<div id="customCompanyBox" class="hidden">
+<label>Enter Company Name</label>
+<input name="other_company">
+</div>
+
+<label>Password</label>
+<input name="password" type="password" required>
+
+<label>Confirm Password</label>
+<input name="confirm" type="password" required>
+
+<button>Register</button>
+
+</form>
+
+<p class="error">{{ error }}</p>
+
+</div>
+
+<script>
+const data = {
+"Food Delivery": ["Swiggy","Zomato","EatSure","Other"],
+"Quick Commerce": ["Blinkit","Zepto","Instamart","BigBasket","Other"],
+"Logistics": ["Amazon Flex","Ekart","Delhivery","Shadowfax","Other"],
+"Courier": ["Porter","Borzo","Dunzo","Uber Connect","Other"]
+};
+
+function updateCompanies(cat){
+    let comp = document.getElementById("company");
+    comp.innerHTML = "";
+
+    if(data[cat]){
+        data[cat].forEach(c=>{
+            let opt = document.createElement("option");
+            opt.text = c;
+            comp.add(opt);
+        });
+    } else {
+        comp.add(new Option("Other","Other"));
+    }
+}
+
+function handleCategory(){
+    let cat = document.getElementById("category").value;
+    document.getElementById("customCategoryBox").style.display =
+        cat==="Other" ? "block" : "none";
+
+    updateCompanies(cat);
+    handleCompany();
+}
+
+function handleCompany(){
+    let comp = document.getElementById("company").value;
+    document.getElementById("customCompanyBox").style.display =
+        comp==="Other" ? "block" : "none";
+}
+
+handleCategory();
+</script>
+
+</body>
+</html>
